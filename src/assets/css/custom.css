@@ -1,0 +1,86 @@
+/* your styles go here */
+
+.top10 {
+    padding-left: 15px;
+}
+
+
+/*------------------------------------------------------------------
+  [User timeline widget]
+*/
+.user-timeline {
+    padding: 0;
+    margin: 5px 0 15px;
+    list-style: none;
+    position: relative;
+  }
+  
+  .user-timeline:before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    height: 100%;
+    width: 2px;
+    background-color: #4285f4;
+  }
+  
+  .user-timeline:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    height: 8px;
+    width: 8px;
+    background-color: #4285f4;
+    border-radius: 50%;
+  }
+  
+  .user-timeline > li {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 27px;
+  }
+  
+  .user-timeline > li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 16px;
+    width: 16px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 1px solid #4285f4;
+  }
+  
+  .user-timeline > li.latest:before {
+    background-color: #4285f4;
+  }
+  
+  .user-timeline-date {
+    text-transform: uppercase;
+    color: #737373;
+    margin-bottom: 8px;
+  }
+  
+  .user-timeline-title {
+    font-weight: 500;
+  }
+  
+
+  body {
+    opacity: 1;
+    transition: 1.5s opacity;
+  }
+  
+  body.fade-out {
+    opacity: 0;
+    transition: none;
+  }
+
+  .user-list-photo {
+    width: 80px;
+    height: 80px;
+  }
