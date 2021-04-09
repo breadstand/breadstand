@@ -1,0 +1,91 @@
+<div class="block" id="addressBlock">
+  <div class="block-header">
+      <h6 class="text-uppercase mb-0">Send To</h6>
+  </div>
+  <div class="block-body">
+      <div class="row" id="customersAddress" >
+
+        
+        <div class="form-group col-md-6">
+          <mat-form-field>
+            <mat-label>Full Name</mat-label>
+            <input type="text" matInput [formControl]="nameFormControl" [(ngModel)]="address.name" placeholder="Ex. Joe Black">
+            <mat-error *ngIf="nameFormControl.hasError('name') && !nameFormControl.hasError('required')">
+              Please enter a valid name
+            </mat-error>
+            <mat-error *ngIf="nameFormControl.hasError('required')">
+              Full name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group col-md-6">
+          <mat-form-field>
+            <mat-label>Street</mat-label>
+            <input type="text" matInput [formControl]="streetFormControl" [(ngModel)]="address.street" placeholder="123 Main St.">
+            <mat-error *ngIf="streetFormControl.hasError('street') && !streetFormControl.hasError('required')">
+              Please enter a valid street address
+            </mat-error>
+            <mat-error *ngIf="streetFormControl.hasError('required')">
+              Street is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group col-md-6">
+          <mat-form-field>
+            <mat-label>Street</mat-label>
+            <input type="text" matInput [formControl]="street2FormControl" [(ngModel)]="address.street2" placeholder="123 Main St.">
+            <mat-error *ngIf="street2FormControl.hasError('street2')">
+              Please enter a valid street address
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group col-md-6">
+          <mat-form-field>
+            <mat-label>City</mat-label>
+            <input type="city" matInput [formControl]="cityFormControl" [(ngModel)]="address.city" placeholder="City">
+            <mat-error *ngIf="streetFormControl.hasError('city') && !streetFormControl.hasError('required')">
+              Please enter a valid city
+            </mat-error>
+            <mat-error *ngIf="cityFormControl.hasError('required')">
+              City is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group col-md-6">
+          <mat-form-field>
+            <mat-label>State</mat-label>
+            <input type="text" matInput [formControl]="stateFormControl" [(ngModel)]="address.state" placeholder="State">
+            <mat-error *ngIf="stateFormControl.hasError('state') && !streetFormControl.hasError('required')">
+              Please enter a valid state
+            </mat-error>
+            <mat-error *ngIf="stateFormControl.hasError('required')">
+              State is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group col-md-6">
+          <mat-form-field>
+            <mat-label>Postal Code</mat-label>
+            <input type="text" matInput [formControl]="postalCodeFormControl" [(ngModel)]="address.postalCode" placeholder="Zip Code">
+            <mat-error *ngIf="postalCodeFormControl.hasError('postalCode') && !postalCodeFormControl.hasError('required')">
+              Please enter a valid postalCode
+            </mat-error>
+            <mat-error *ngIf="postalCodeFormControl.hasError('required')">
+              Postal Code is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      
+      </div>
+      <div class='row'>
+        <div class='col'>
+          <button class='btn btn-dark' (click)="sendToConsole()">Send to Console</button>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,18 +1,44 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductOfferingsComponent } from './product-offerings/product-offerings.component';
+import { MenuComponent } from './menu/menu.component';
+import { ServiceBlockComponent } from './service-block/service-block.component';
+import { MessageNewComponent } from './message-new/message-new.component';
+import { AddressFormComponent } from './address-form/address-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { UserMachinesComponent } from './user-machines/user-machines.component';
+import { MachinesComponent } from './machines/machines.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { CustomerSidebarComponent } from './customer-sidebar/customer-sidebar.component';
+
 
 @NgModule({
-  declarations: [
+  declarations: [								
     AppComponent,
-    ProductOfferingsComponent
-  ],
+    ProductOfferingsComponent,
+      MenuComponent,
+      ServiceBlockComponent,
+      MessageNewComponent,
+      AddressFormComponent,
+      UserMachinesComponent,
+      MachinesComponent,
+      HeroSectionComponent,
+      CustomerSidebarComponent
+   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,107 @@
+<form class="form" id="message-form" method="post" action="/messages" encType="multipart/form-data">
+    <section class="product-details">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 py-3 order-2 order-lg-1">
+                <div class="owl-carousel owl-theme owl-dots-modern detail-full" data-slider-id="1">
+                  <div class="detail-full-item" style="background: center center url('https://files.stripe.com/links/MDB8YWNjdF8xODg4SEhLaEJxdGpmTWoxfGZsX3Rlc3RfSDBZbUdpZkVtNWNwbmtXNW1qNUY5VUpX00FePibefz') no-repeat; background-size: cover;"></div>
+                  <div class="detail-full-item" style="background: center center url('http://localhost:5000/img/photo/cailler-milch.jpg') no-repeat; background-size: cover;"></div>
+                  <div class="detail-full-item" style="background: center center url('http://localhost:5000/img/photo/cailler-napolitains-250g.jpg') no-repeat; background-size: cover;"></div>
+                  <div class="detail-full-item" style="background: center center url('http://localhost:5000/img/photo/cailler-napolitains-250g-back.jpg') no-repeat; background-size: cover;"></div>
+                  <div class="detail-full-item" style="background: center center url('http://localhost:5000/img/photo/familyplaying-background.jpg') no-repeat; background-size: cover;"></div>
+                </div>
+            </div>
+            <div class="d-flex col-lg-6 col-xl-5 pl-lg-5 mb-2 order-1 order-lg-2">
+                <div>
+                  <ul class="breadcrumb justify-content-start">
+                      <li class="breadcrumb-item"><a href="/">Home</a></li>
+                      <li class="breadcrumb-item">Chocolate Mail</li>
+                      <li class="breadcrumb-item active">New Message</li>
+                  </ul>
+                  <ul id="submissionErrors"></ul>
+                  <h1 class="mb-4" id="mainHeading">Chocolate Mail</h1>
+                  <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
+                      <div class="d-flex align-items-center">
+                        <ul class="list-inline mr-2 mb-0">
+                            <li class="list-inline-item mr-0"><i class="fa fa-star text-primary"></i></li>
+                            <li class="list-inline-item mr-0"><i class="fa fa-star text-primary"></i></li>
+                            <li class="list-inline-item mr-0"><i class="fa fa-star text-primary"></i></li>
+                            <li class="list-inline-item mr-0"><i class="fa fa-star text-primary"></i></li>
+                            <li class="list-inline-item mr-0"><i class="fa fa-star text-primary"></i></li>
+                        </ul>
+                        <span class="text-muted text-uppercase text-sm">9,834 reviews</span>
+                      </div>
+                  </div>
+                  <p class="text-muted" id="productDescription">Instantly send a personalized photo card along with some of the world's best Swiss chocolate to someone you appreciate. If you love to show people they're important, this is for you. A meaningful way to show someone you care.</p>
+                  <p class="text-muted mb-4">Free shipping. Arrives by USPS mail in 2-3 business days. (USA Only)</p>
+                  <div class="row">
+                      <div class="col-sm-6 col-lg-12 detail-option mb-3">
+                        <h6 class="detail-option-heading">Chocolate Type <span>(required)</span></h6>
+                        <label class="btn btn-sm btn-outline-secondary detail-option-btn-label mr-1 active" id="priceLabel-price_1IUyACKhBqtjfMj1PAU48qXm" for="price-price_1IUyACKhBqtjfMj1PAU48qXm">Milk Chocolate Bar $24.95<input class="input-invisible" type="radio" name="stripePriceId" value="price_1IUyACKhBqtjfMj1PAU48qXm" id="price-price_1IUyACKhBqtjfMj1PAU48qXm" checked="checked"/></label><label class="btn btn-sm btn-outline-secondary detail-option-btn-label mr-1" id="priceLabel-price_1IUy9aKhBqtjfMj1UPcf5rKN" for="price-price_1IUy9aKhBqtjfMj1UPcf5rKN">9 Minis $14.95<input class="input-invisible" type="radio" name="stripePriceId" value="price_1IUy9aKhBqtjfMj1UPcf5rKN" id="price-price_1IUy9aKhBqtjfMj1UPcf5rKN"/></label>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="pb-5">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                      <div class="block" id="messageBlock">
+                        <div class="block-header">
+                            <h6 class="text-uppercase mb-0">Message</h6>
+                        </div>
+                        <div class="block-body">
+                            <div class="row">
+                              <div class="form-group col-12"><label class="form-label" for="title">Title</label><input class="form-control" type="text" name="title" placeholder="Headline" id="title" maxlength="80" required="required"/></div>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-12"><label class="form-label" for="body">Message</label><textarea class="form-control" rows="3" name="body" id="body" maxlength="750" placeholder="Your personal message" required="required"></textarea></div>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-12"><input class="filepond border" id="attachmentInput" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/></div>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-12">
+                                  <div class="custom-control custom-checkbox"><input class="custom-control-input" id="public" type="checkbox" name="public"/><label class="custom-control-label align-middle" for="public" data-toggle="collapse" data-target="#messagePrivacy" aria-expanded="false" aria-controls="messagePrivacy">Pubilc: Okay to share with others.</label></div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <app-address-form></app-address-form>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                      <div class="block" id="paymentBlock">
+                        <div class="block-header">
+                            <h6 class="text-uppercase mb-0">Payment Information</h6>
+                        </div>
+                        <div class="block-body">
+                            <div class="row">
+                              <div class="form-group col-12">
+                                  <input type="hidden" id="defaultPaymentMethod" name="defaultPaymentMethod" value="pm_1ITp5fKhBqtjfMj1cBUuxjCt"/>
+                                  <svg class="svg-icon svg-icon-heavy mr-2">
+                                    <use xlink:href="#credit-card-1"></use>
+                                  </svg>
+                                  <span>VISA</span> <span>4242</span><br/>Or
+                                  <div id="card-element"></div>
+                                  <div id="card-errors" role="alert"></div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center"><button class="btn btn-dark" id="sendButton" name="send"><i class="fa fa-paper-plane ml-2"></i> Pay and Send Now</button></div>
+          </div>
+      </div>
+    </section>
+</form>
