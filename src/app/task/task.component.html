@@ -1,3 +1,70 @@
-<p>
-  task works!
-</p>
+<section>
+  <app-hero-section></app-hero-section>
+</section>
+
+<section>
+  <div class='container'>
+    <div class='row mb-3'>
+      <div class='col'>
+      <!--
+
+        .block.mb-5
+        .block-header
+            strong.text-uppercase Task Information
+        .block-body
+            if errors
+                ul
+                    each error in errors
+                        li.text-danger=error.msg
+            form(id='editForm' method='post' action=`/tasks/${task.id}/edit`)
+                .row                                    
+                    .col-md-6
+                        .row
+                            .col-12
+                                .form-group
+                                    label(for="name" class="form-label") Name
+                                    input(id="name" type="text" name="name" class="form-control" value=formValues.name )
+
+                            .col-12
+                                .form-group
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea rows="10" name="description" id="description" placeholder="How is this done?" required="required" class="form-control">#{formValues.description}</textarea>
+
+                            .col-12
+                                .custom-control.custom-checkbox.mt-4
+                                    input(id="active" type="checkbox" name="active" class="custom-control-input" checked=formValues.active value='true')
+                                    label(for="active" data-toggle="collapse" data-target="#active" aria-expanded="false" aria-controls="active" class="custom-control-label align-middle" ) Active
+
+                    .col-md-6
+                        for exception in exceptions
+                            .block.mb-2
+                                if exception.active
+                                    .block-header
+                                        strong.text-uppercase Exception:
+                                            a(href=`/tasks/${task.id}/exceptions/${exception.id}/edit`)=exception.name                                                    
+                                            if !exception.active
+                                                span  (Inactive)
+                                    .block-body=exception.description
+                                else
+                                    .block-header
+                                        .text-uppercase Exception:
+                                            a(href=`/tasks/${task.id}/exceptions/${exception.id}/edit`)=exception.name                                                    
+                                    
+
+                        a.btn.btn-outline-dark(href=`/tasks/${task.id}/exceptions/add`) Add Exception
+
+                .text-center.mt-4
+                    a(id='cancelButton' href=`/tasks` class="btn btn-outline-dark mr-2")
+                        i(class="fa fa-times mr-2")
+                        | Cancel
+                    button(id='saveButton' type="submit" class="btn btn-dark mr-2")
+                        i(class="fa fa-save mr-2")
+                        | Save task
+
+-->
+
+
+      </div>        
+    </div>
+  </div>
+</section>
