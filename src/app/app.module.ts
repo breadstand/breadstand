@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductOfferingsComponent } from './product-offerings/product-offerings.component';
@@ -16,10 +17,12 @@ import { UserMachinesComponent } from './user-machines/user-machines.component';
 import { MachinesComponent } from './machines/machines.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { CustomerSidebarComponent } from './customer-sidebar/customer-sidebar.component';
+import { TasksComponent } from './tasks/tasks.component';
+
 
 
 @NgModule({
-  declarations: [								
+  declarations: [									
     AppComponent,
     ProductOfferingsComponent,
       MenuComponent,
@@ -29,13 +32,15 @@ import { CustomerSidebarComponent } from './customer-sidebar/customer-sidebar.co
       UserMachinesComponent,
       MachinesComponent,
       HeroSectionComponent,
-      CustomerSidebarComponent
+      CustomerSidebarComponent,
+      TasksComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule

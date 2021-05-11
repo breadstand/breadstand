@@ -4,6 +4,8 @@ import { ProductOfferingsComponent } from './product-offerings/product-offerings
 import { MessageNewComponent } from './message-new/message-new.component';
 import { UserMachinesComponent } from './user-machines/user-machines.component';
 import { MachinesComponent } from './machines/machines.component';
+import { TasksComponent } from './tasks/tasks.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/product-offerings', pathMatch: 'full'},
@@ -13,9 +15,10 @@ const routes: Routes = [
     path: 'machines', 
     component: MachinesComponent,
     children: [
-      { path: 'list', component: UserMachinesComponent }
+      { path: 'list', component: UserMachinesComponent },
     ] 
-  }
+  },
+  { path: 'whiterabbit/tasks', component: TasksComponent } 
 ];
 
 @NgModule({

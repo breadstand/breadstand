@@ -1,5 +1,5 @@
   <!-- Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-sticky navbar-airy navbar-light bg-white bg-fixed-white">
+  <nav class="navbar navbar-expand-xl navbar-sticky navbar-airy navbar-light bg-white bg-fixed-white">
     <div class="container-fluid">
       <!-- Navbar Header  -->
       <a class="navbar-brand" href="/">
@@ -17,15 +17,30 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="/thanks/">th8nks.com</a></li>
           <li class="nav-item"><a class="nav-link" href="/whiterabbit">White Rabbit </a></li>
-          <li class="nav-item dropdown"><a class="nav-link" id="adminDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin<i class="fa fa-angle-down"></i></a>
-            <ul class="dropdown-menu" aria-labelledby="adminDropdownMenuLink">
-              <li><a class="dropdown-item" href="/machines">Machines</a></li>
-              <li><a class="dropdown-item" href="/messages?all=true">Messages</a></li>
-              <li><a class="dropdown-item" href="/products">Products</a></li>
-              <li><a class="dropdown-item" href="/thanks/teams">Teams</a></li>
-              <li><a class="dropdown-item" href="/users">Users</a></li>
-              <li><a class="dropdown-item" href="/machines/waitlist">Waitlist</a></li>
-            </ul>
+
+          <li class="nav-item dropdown position-static"><a href="#" data-toggle="dropdown" class="nav-link">Admin<i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-menu megamenu py-lg-0">
+              <div class="row">
+                <div class="col">
+                  <div class="row p-3 pr-lg-0 pl-lg-5 pt-lg-5">
+                    <div class="col-lg-3">
+                      <!-- Megamenu list-->
+                      <h6 class="text-uppercase">Machines</h6>
+                      <ul class="megamenu-list list-unstyled">
+                        <li class="megamenu-list-item"><a href="/machines" class="megamenu-list-link">Machines</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <!-- Megamenu list-->
+                      <h6 class="text-uppercase">White Rabbit</h6>
+                      <ul class="megamenu-list list-unstyled">
+                        <li class="megamenu-list-item"><a href="/whiterabbit/tasks" class="megamenu-list-link">Tasks</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link active" id="accountDropdownMenuLink" href="" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img class="img-fluid rounded-circle customer-image p-0 mb-0" src="" width="25" height="25" /></a>
