@@ -18,11 +18,12 @@ import { MachinesComponent } from './machines/machines.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { CustomerSidebarComponent } from './customer-sidebar/customer-sidebar.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { TaskComponent } from './task/task.component';
 
 
 
 @NgModule({
-  declarations: [									
+  declarations: [										
     AppComponent,
     ProductOfferingsComponent,
       MenuComponent,
@@ -33,7 +34,8 @@ import { TasksComponent } from './tasks/tasks.component';
       MachinesComponent,
       HeroSectionComponent,
       CustomerSidebarComponent,
-      TasksComponent
+      TasksComponent,
+      TaskComponent
    ],
   imports: [
     BrowserModule,
